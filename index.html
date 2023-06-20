@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="bg">
+
+    
+      <img src="./images/bg-main-desktop.png" alt="desktop-bg">
+      
+
+        <div class="top">
+            <img   src="./images/bg-card-front.png" alt="card-front">
+            <div class="circlr">
+          
+            </div>
+            <div class="smaller">
+
+            </div>
+            <div class="number">
+              <p id="c-number">9591<span ></span>6489<span></span>1011<span></span>1011</p>
+
+            </div>
+            <div class="cname">
+              <p id="c-name">Cardholder Name</p>
+            </div>
+            <div class="ex-date">
+              <p id="c-mm">09</p>
+            </div>
+            <div class="dash">
+              <p>/</p>
+            </div>
+            <div class="ex-year"> 
+              <p  id="c-yy">23</p>
+            </div>
+        </div>
+        
+        
+
+       
+      
+      <div class="back">
+        <img  src="./images/bg-card-back.png" alt="card-back">
+        <div class="cvc">
+          <p id="c-cvc">000</p>
+        </div>
+      </div>
+      
+    
+
+
+  </div>
+
+  <div class="details">
+
+    <div class="info">
+
+      <div class="form-group">
+        <label class="lable" for="name">Cardholder Name</label>
+        <input class="input" type="name" id="name"  name="name">
+      </div>
+
+      <div class="form-group">
+        <label class="lable" for="number"> Card Number</label>
+        <input class="input" type="number" maxlength="2" id="number" oninput="restrictInputLength(event , 16)" name="number">
+      </div>
+
+      <div class="last" style="padding-right: 21px;">
+
+        <div class="form-group">
+          <label class="lable" for="number">Exp. Date (MM/YY)</label>
+          <div style="display: flex;">
+            <input class="input" type="number" id="MM" oninput="restrictInputLength(event , 2)" name="number" style="width: 50px; margin-right: 10px;">
+            <input class="input" type="number" id="YY" oninput="restrictInputLength(event , 2)" name="number" style="width: 50px;">
+          </div>
+          
+        </div>
+
+        <div class="form-group">
+          <label class="lable" for="number">CVC</label>
+          <input class="input" type="number" id="cvc" oninput="restrictInputLength(event , 3)" name="number" style="margin-right: 20px;">
+        </div>
+        
+      </div>
+
+      <button  name="submit">Confirm</button>
+
+    </div>
+
+
+    <div class="confirm">
+
+      <img src="./images/icon-complete.svg" alt="Completed">
+
+      <h1 style="color: hsl(278, 68%, 11%); font-weight: 100;">THANK YOU</h1>
+
+      <p style="margin-bottom: 20px;">We've added your card details</p>
+
+      <button  class="continue" name="submit">Continue</button>
+
+    </div>
+
+  </div>
+
+
+  <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+  
+  <script src="./index.js"></script>
+</body>
+</html>
