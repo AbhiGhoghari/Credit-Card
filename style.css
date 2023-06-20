@@ -43,6 +43,9 @@ html , body{
     width: 50px;
     
  }
+span{
+    margin-inline:10px
+}
  .smaller{
     position: absolute;
     height: 25px;
